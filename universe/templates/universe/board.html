@@ -12,10 +12,11 @@
 
 <div class="container mt-5">
     <h1>게시판</h1>
-    <a href="" class="">글쓰기</a>
+    <a href="{%url 'post'%}" >글쓰기</a>
 
     {% for content in write %}
     <a href="{% url 'comment_page'%}"><h5>{{content}}</h5></a>
+    <h6>{{created_at}}</h6>
     {% endfor %}
 </div>
     
